@@ -5,6 +5,14 @@ use std::io::prelude::*;
 use std::collections::HashMap;
 use unicode_segmentation::UnicodeSegmentation;
 
+
+/// Prints a summary of the contents of a grapheme counter.
+fn print_summary(counter: HashMap<String, u64>) {
+    for (key, val) in counter.iter() {
+        println!("key: {} val: {}", key, val);
+    }
+}
+
 fn main() {
     let stdin = io::stdin();
     let mut counter : HashMap<String, u64> = HashMap::new();
@@ -24,8 +32,5 @@ fn main() {
         }
     }
 
-    // Print summary.
-    for (key, val) in counter.iter() {
-        println!("key: {} val: {}", key, val);
-    }
+    print_summary(counter);
 }

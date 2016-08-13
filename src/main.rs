@@ -6,11 +6,10 @@ use std::io::prelude::*;
 use std::collections::HashMap;
 use unicode_segmentation::UnicodeSegmentation;
 
-
 /// Prints a summary of the contents of a grapheme counter.
 fn print_summary(counter: HashMap<String, u64>) {
     for (key, val) in counter.iter() {
-        println!("key: {} val: {}", key, val);
+        println!("{}: {}", key, val);
     }
 }
 

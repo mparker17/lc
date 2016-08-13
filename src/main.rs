@@ -12,7 +12,7 @@ fn print_summary(counter: HashMap<String, u64>) {
     }
 }
 
-/// Counts the number of graphemes in a string.
+/// Counts all the graphemes in a string.
 fn count_graphemes_in_string(to_parse: String, mut counter: &mut HashMap<String, u64>) {
     // The UnicodeSegmentation library can only handle string slices. Convert
     // the input string to that before parsing.

@@ -1,6 +1,6 @@
 [package]
 name = "lc"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["M Parker <mparker17@536298.no-reply.drupal.org>"]
 
 [dependencies]

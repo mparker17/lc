@@ -1,6 +1,7 @@
 extern crate unicode_segmentation;
 
 use std::io;
+use std::io::Lines;
 use std::io::prelude::*;
 use std::collections::HashMap;
 use unicode_segmentation::UnicodeSegmentation;
@@ -13,12 +14,9 @@ fn print_summary(counter: HashMap<String, u64>) {
     }
 }
 
-fn main() {
-    let stdin = io::stdin();
-    let mut counter : HashMap<String, u64> = HashMap::new();
-
-    // Read one line at a time.
-    for line in stdin.lock().lines() {
+/// Counts graphemes in a set of lines.
+fn count_graphemes_in_lines(lines: Lines<std::io::StdinLock>, counter: &mut HashMap<String, u64>) {
+    for line in lines {
         let line_string = line.unwrap();
 
         // Loop through each character in the current line...
@@ -31,6 +29,13 @@ fn main() {
             *count += 1;
         }
     }
+}
 
+fn main() {
+    let stdin = io::stdin();
+    let mut counter : HashMap<String, u64> = HashMap::new();
+    let lines = stdin.lock().lines();
+
+    count_graphemes_in_lines(lines, &mut counter);
     print_summary(counter);
 }

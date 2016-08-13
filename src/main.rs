@@ -1,13 +1,13 @@
 #[macro_use]
 extern crate clap;
 
-use std::io;
-use std::io::prelude::*;
-use std::io::BufReader;
-use std::fs::File;
-use std::collections::HashMap;
 use clap::App;
 use clap::Arg;
+use std::collections::HashMap;
+use std::fs::File;
+use std::io;
+use std::io::BufReader;
+use std::io::prelude::*;
 
 mod lc;
 
@@ -15,16 +15,17 @@ fn main() {
     let matches = App::new("lc - letter count")
         .version(crate_version!())
         .author(crate_authors!())
-        .about("The lc utility displays the number of instances of each letter contained in each input, or standard input (if no file is specified) to the standard output. Newline characters are not counted.")
-        .arg(Arg::with_name("file")
-           .help("Sets the input file to use"))
+        .about("The lc utility displays the number of instances of each letter contained in each \
+                input, or standard input (if no file is specified) to the standard output. \
+                Newline characters are not counted.")
+        .arg(Arg::with_name("file").help("Sets the input file to use"))
         .get_matches();
 
-    let mut counter : HashMap<String, u64> = HashMap::new();
+    let mut counter: HashMap<String, u64> = HashMap::new();
 
     // If a file to read from was passed in, use it. Otherwise, use standard
     // input.
-    let file : Box<io::Read> = match matches.value_of("file") {
+    let file: Box<io::Read> = match matches.value_of("file") {
         Some(filename) => Box::new(File::open(filename).unwrap()),
         None => Box::new(io::stdin()),
     };

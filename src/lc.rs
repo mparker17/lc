@@ -1,7 +1,7 @@
 extern crate unicode_segmentation;
 
-use std::collections::HashMap;
 use self::unicode_segmentation::UnicodeSegmentation;
+use std::collections::HashMap;
 
 /// Prints a summary of the contents of a grapheme counter.
 pub fn print_summary(counter: HashMap<String, u64>) {

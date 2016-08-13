@@ -13,15 +13,14 @@ fn main() {
     for line in stdin.lock().lines() {
         let line_string = line.unwrap();
 
-        // Loop through each character in the current line. If the character we
-        // are looking at already exists in the counter hash, increment the
-        // counter. Otherwise, start a new counter for the character.
+        // Loop through each character in the current line...
         for grapheme in UnicodeSegmentation::graphemes(line_string.as_str(), true) {
-            let num = match counter.get(grapheme) {
-                Some(value) => *value,
-                None => 0 as u64,
-            };
-            counter.insert(grapheme.to_string(), num + 1);
+            // If the character we are looking at already exists in the counter
+            // hash, get its value. Otherwise, start a new counter at zero.
+            let count = counter.entry(grapheme.to_string()).or_insert(0);
+
+            // In either case, increment the counter.
+            *count += 1;
         }
     }
 

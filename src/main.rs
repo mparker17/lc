@@ -7,7 +7,7 @@ use unicode_segmentation::UnicodeSegmentation;
 
 fn main() {
     let stdin = io::stdin();
-    let mut counter = HashMap::new();
+    let mut counter : HashMap<String, u64> = HashMap::new();
 
     // Read one line at a time.
     for line in stdin.lock().lines() {

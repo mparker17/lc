@@ -5,3 +5,4 @@ authors = ["M Parker <mparker17@536298.no-reply.drupal.org>"]
 
 [dependencies]
 unicode-segmentation = "0.1.2"
+clap = "2.10.0"

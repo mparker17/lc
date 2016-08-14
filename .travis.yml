@@ -4,9 +4,8 @@ rust:
   - nightly
   - beta
   - stable
-before_script:
-  - rustc -V
-  - cargo -V
+# Note that Travis automatically runs `rustc --version` and `cargo --version`
+# before the `before_install` step.
 script:
   - cargo build --verbose
   - cargo test --verbose

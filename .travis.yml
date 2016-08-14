@@ -10,3 +10,4 @@ before_script:
 script:
   - cargo build --verbose
   - cargo test --verbose
+  - cargo bench

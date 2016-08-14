@@ -1,0 +1,28 @@
+# Problem / motivation
+
+(User stories ("As an x I want to y so that z"), longer description of why the issue was filed, etc.)
+
+## Steps to reproduce
+
+1. (Steps to reproduce the problem)
+    a. Expected behavior: (expected behavior)
+    b. Actual behavior: (actual behavior)
+
+# Proposed resolution
+
+(Description of the proposed solution, the rationale behind it, and workarounds.)
+
+# Remaining tasks
+
+- [ ] Update "Remaining tasks"
+- [ ] Write automated tests
+- [ ] Code review by @mparker17
+- [ ] Commit
+
+# User interface changes
+
+(New or changed features/functionality in the CLI interface, changes to output, changes to help text / prompts.)
+
+# API changes
+
+(API changes/additions that would affect Rust developers using the program, including examples of before/after code if appropriate.)

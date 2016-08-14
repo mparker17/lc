@@ -19,4 +19,4 @@
 
 # API changes
 
-(API changes/additions that would affect Rust developers using the program, including examples of before/after code if appropriate.)
+(API changes/additions that would affect [Rust] developers using the program's API, including examples of before/after code if appropriate.)

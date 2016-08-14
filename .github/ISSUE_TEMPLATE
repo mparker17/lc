@@ -4,6 +4,7 @@
 
 ## Steps to reproduce
 
+1. (Remove this section if this is a feature request / enhancement)
 1. (Steps to reproduce the problem)
     a. Expected behavior: (expected behavior)
     b. Actual behavior: (actual behavior)
@@ -25,4 +26,4 @@
 
 # API changes
 
-(API changes/additions that would affect Rust developers using the program, including examples of before/after code if appropriate.)
+(API changes/additions that would affect [Rust] developers using the program's API, including examples of before/after code if appropriate.)

@@ -1,12 +1,6 @@
-sudo: false
 language: rust
 rust:
   - nightly
   - beta
   - stable
-# Note that Travis automatically runs `rustc --version` and `cargo --version`
-# before the `before_install` step.
-script:
-  - cargo build --verbose
-  - cargo test --verbose
-  - cargo bench
+cache: cargo

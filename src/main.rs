@@ -16,10 +16,9 @@
     unused_qualifications,
     unused_results
 )]
-#[macro_use]
 
-extern crate clap;
-
+use clap::crate_authors;
+use clap::crate_version;
 use clap::App;
 use clap::Arg;
 use std::collections::HashMap;

@@ -11,4 +11,4 @@ readme = "README.md"
 
 [dependencies]
 unicode-segmentation = "0.1.2"
-clap = "2.10.0"
+clap = "2.32.0"

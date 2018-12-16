@@ -3,6 +3,7 @@ name = "lc"
 description = "The lc utility displays the number of instances of each letter contained in each input, or standard input (if no file is specified) to the standard output. Newline characters are not counted."
 version = "0.2.0"
 authors = ["M Parker <mparker17@536298.no-reply.drupal.org>"]
+edition = "2018"
 repository = "https://github.com/mparker17/lc"
 homepage = "https://github.com/mparker17/lc"
 license = "GPL-2.0"

@@ -5,7 +5,7 @@
         unstable_features,
         unused_extern_crates, unused_import_braces, unused_qualifications, unused_results)]
 
-extern crate unicode_segmentation;
+use unicode_segmentation;
 
 use self::unicode_segmentation::UnicodeSegmentation;
 use std::collections::HashMap;

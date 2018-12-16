@@ -3,12 +3,19 @@
 //! Displays the number of instances of each letter contained in each input
 //! `file`, or standard input (if no `file` is specified) to the standard
 //! output. Newline characters are not counted.
-#![warn(missing_docs,
-        missing_debug_implementations, missing_copy_implementations,
-        trivial_casts, trivial_numeric_casts,
-        unsafe_code,
-        unstable_features,
-        unused_extern_crates, unused_import_braces, unused_qualifications, unused_results)]
+#![warn(
+    missing_docs,
+    missing_debug_implementations,
+    missing_copy_implementations,
+    trivial_casts,
+    trivial_numeric_casts,
+    unsafe_code,
+    unstable_features,
+    unused_extern_crates,
+    unused_import_braces,
+    unused_qualifications,
+    unused_results
+)]
 #[macro_use]
 
 extern crate clap;
@@ -18,8 +25,8 @@ use clap::Arg;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io;
-use std::io::BufReader;
 use std::io::prelude::*;
+use std::io::BufReader;
 
 mod lc;
 
@@ -28,9 +35,11 @@ fn main() {
     let matches = App::new("lc - letter count")
         .version(crate_version!())
         .author(crate_authors!())
-        .about("The lc utility displays the number of instances of each letter contained in each \
-                input, or standard input (if no file is specified) to the standard output. \
-                Newline characters are not counted.")
+        .about(
+            "The lc utility displays the number of instances of each letter contained in each \
+             input, or standard input (if no file is specified) to the standard output. \
+             Newline characters are not counted.",
+        )
         .arg(Arg::with_name("file").help("Sets the input file to use"))
         .get_matches();
 

@@ -10,5 +10,5 @@ license = "GPL-2.0"
 readme = "README.md"
 
 [dependencies]
-unicode-segmentation = "1.2.1"
-clap = "2.32.0"
+unicode-segmentation = "^1.2.1"
+clap = "^2.32.0"

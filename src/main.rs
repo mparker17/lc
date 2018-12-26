@@ -1,4 +1,4 @@
-//! Letter count.
+//! Letter count: executable.
 //!
 //! Displays the number of instances of each letter contained in each input
 //! `file`, or standard input (if no `file` is specified) to the standard
@@ -26,8 +26,6 @@ use std::fs::File;
 use std::io;
 use std::io::prelude::*;
 use std::io::BufReader;
-
-mod lc;
 
 /// Main entry point for the letter count utility.
 fn main() {

@@ -1,3 +1,6 @@
+//! Letter count: library.
+//!
+//! Functions to count graphemes in a string and print a summary.
 #![warn(
     missing_docs,
     missing_debug_implementations,

@@ -54,8 +54,8 @@ fn main() {
 
     // Loop through all the lines, and count the graphemes in each one.
     for line in reader.lines() {
-        lc::count_graphemes_in_string(line.unwrap(), &mut counter);
+        lc::count_graphemes_in_string(&line.unwrap(), &mut counter);
     }
 
-    lc::print_summary(counter);
+    lc::print_summary(&counter);
 }

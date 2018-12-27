@@ -3,9 +3,11 @@ use std::collections::HashMap;
 
 #[test]
 fn counts_graphemes() {
+    // Set up the test inputs.
     let mut counter: HashMap<String, u64> = HashMap::new();
     let test = "test ¢¢¢ test हहह €€€ 𐍈𐍈𐍈 स्स्स् test";
 
+    // Run the system under test.
     lc::count_graphemes_in_string(test, &mut counter);
 
     // Check the number of graphemes found.

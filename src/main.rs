@@ -5,6 +5,7 @@
 //! output. Newline characters are not counted.
 
 use clap::crate_authors;
+use clap::crate_description;
 use clap::crate_version;
 use clap::App;
 use clap::Arg;
@@ -19,11 +20,7 @@ fn main() {
     let matches = App::new("lc - letter count")
         .version(crate_version!())
         .author(crate_authors!())
-        .about(
-            "The lc (which stands for \"letter count\") utility displays the number of \
-             instances of each letter contained in each input file, or standard input (if no \
-             file is specified) to the standard output. Newline characters are not counted.",
-        )
+        .about(crate_description!())
         .arg(Arg::with_name("file").help("Sets the input file to use"))
         .get_matches();
 

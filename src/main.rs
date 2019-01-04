@@ -20,9 +20,9 @@ fn main() {
         .version(crate_version!())
         .author(crate_authors!())
         .about(
-            "The lc utility displays the number of instances of each letter contained in each \
-             input, or standard input (if no file is specified) to the standard output. \
-             Newline characters are not counted.",
+            "The lc (which stands for \"letter count\") utility displays the number of \
+             instances of each letter contained in each input file, or standard input (if no \
+             file is specified) to the standard output. Newline characters are not counted.",
         )
         .arg(Arg::with_name("file").help("Sets the input file to use"))
         .get_matches();

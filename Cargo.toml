@@ -9,6 +9,9 @@ homepage = "https://github.com/mparker17/lc"
 license = "GPL-2.0"
 readme = "README.md"
 
+[badges]
+travis-ci = { repository = "mparker17/lc", branch = "master" }
+
 [dependencies]
 unicode-segmentation = "^1.2.1"
 clap = "^2.32.0"

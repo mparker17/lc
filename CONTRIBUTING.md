@@ -50,3 +50,9 @@
         added to the rest of the commit message.
 4. Push your branch to your fork.
 5. Submit a pull request.
+
+# Packaging
+
+Docker:
+
+        docker build -f packaging/docker/Dockerfile .

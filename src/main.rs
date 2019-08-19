@@ -28,7 +28,7 @@ fn main() {
 
     // If a file to read from was passed in, use it. Otherwise, use standard
     // input.
-    let file: Box<Read> = match matches.value_of("file") {
+    let file: Box<dyn Read> = match matches.value_of("file") {
         Some(filename) => Box::new(File::open(filename).unwrap()),
         None => Box::new(io::stdin()),
     };

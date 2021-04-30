@@ -2,9 +2,7 @@
 //!
 //! Functions to count graphemes in a string and print a summary.
 
-use unicode_segmentation;
-
-use self::unicode_segmentation::UnicodeSegmentation;
+use unicode_segmentation::UnicodeSegmentation;
 use std::collections::HashMap;
 
 /// Prints a summary of the contents of a grapheme counter.

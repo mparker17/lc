@@ -24,4 +24,4 @@ travis-ci = { repository = "mparker17/lc", branch = "master" }
 
 [dependencies]
 unicode-segmentation = "^1.2.1"
-clap = "^2.32.0"
+clap = { version = "^3.2.22", features = ["cargo"] }

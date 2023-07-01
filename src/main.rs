@@ -4,11 +4,7 @@
 //! `file`, or standard input (if no `file` is specified) to the standard
 //! output. Newline characters are not counted.
 
-use clap::crate_authors;
-use clap::crate_description;
-use clap::crate_version;
-use clap::App;
-use clap::Arg;
+use clap::{arg, Command, crate_version, crate_authors, crate_description};
 use std::collections::HashMap;
 use std::fs::File;
 use std::io;
@@ -17,18 +13,18 @@ use std::io::BufReader;
 
 /// Main entry point for the letter count utility.
 fn main() {
-    let matches = App::new("lc - letter count")
+    let matches = Command::new("lc - letter count")
         .version(crate_version!())
         .author(crate_authors!())
         .about(crate_description!())
-        .arg(Arg::with_name("file").help("Sets the input file to use"))
+        .arg(arg!(-f --file <FILE> "Sets the input file to use"))
         .get_matches();
 
     let mut counter: HashMap<String, u64> = HashMap::new();
 
     // If a file to read from was passed in, use it. Otherwise, use standard
     // input.
-    let file: Box<dyn Read> = match matches.value_of("file") {
+    let file: Box<dyn Read> = match matches.get_one::<String>("file") {
         Some(filename) => Box::new(File::open(filename).unwrap()),
         None => Box::new(io::stdin()),
     };
